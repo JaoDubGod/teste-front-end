@@ -1,0 +1,45 @@
+@use '../../styles/variables' as v;
+
+.lista-produto {
+    padding: 56px 0;
+    background-color: v.$color-white;
+
+    &__container {
+        max-width: v.$max-largura;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    &__titulo {
+        text-align: center;
+        font-size: v.$font-size-grande;
+        font-weight: 700;
+        color: v.$color-preco-dark;
+        margin-bottom: 40px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: v.$color-orange;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        @media (max-width: v.$largura-desktop) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: v.$largura-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

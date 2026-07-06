@@ -1,0 +1,104 @@
+@use '../../styles/variables' as v;
+
+.header {
+    width: 100%;
+    height: v.$header-altura;
+    background-color: v.$color-bg-dark;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: v.$font-size-grande;
+        font-weight: 700;
+        color: v.$color-white;
+        white-space: nowrap;
+
+        &-icon {
+            color: v.$color-purple-claro;
+            font-size: 10px;
+        }
+    }
+
+    &__search {
+        flex: 1;
+        display: flex;
+        max-width: 480px;
+        background-color: v.$color-white;
+        border-radius: v.$raio-pequeno;
+        overflow: hidden;
+
+        &-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px 14px;
+            font-size: v.$font-size-sp;
+            color: v.$color-preco-dark;
+        }
+
+        &-button {
+            background-color: v.$color-orange;
+            border: none;
+            padding: 0px 16px;
+            cursor: pointer;
+            color: v.$color-white;
+            font-size: v.$font-size-pequeno;
+
+            &:hover {
+                background-color: v.$color-orange-dark;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: auto;
+    }
+
+    &__action {
+        background: none;
+        border: none;
+        color: v.$color-white;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        font-size: v.$font-size-sp;
+
+        &-icon {
+            font-size: v.$font-size-meio;
+        }
+
+        &-label {
+            @media (max-width: v.$largura-tablet) {
+                display: none;
+            }
+        }
+
+        &:hover {
+            color: v.$color-purple-claro;
+        }
+    }
+
+    @media (max-width: v.$largura-tablet) {
+        &__container {
+            gap: 12px;
+        }
+
+        &__search {
+            max-width: none;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+@use '../../styles/variables' as v;
+
+.cartao-produto {
+    background-color: v.$color-white;
+    border: 1px solid #ececf3;
+    border-radius: v.$raio-medio;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        transform: translateY(-3px);
+    }
+
+    &__imagem {
+        width: 100%;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        img {
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__nome {
+        font-size: v.$font-size-sp;
+        font-weight: 600;
+        color: v.$color-preco-dark;
+        margin-bottom: 10px;
+        min-height: 36px;
+    }
+
+    &__precos {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 16px;
+    }
+
+    &__preco-antigo {
+        font-size: v.$font-size-pequeno;
+        color: v.$color-preco-velho;
+        text-decoration: line-through;
+    }
+
+    &__preco-novo {
+        font-size: v.$font-size-meio;
+        font-weight: 700;
+        color: v.$color-preco-novo;
+    }
+
+    &__comprar {
+        width: 100%;
+        background-color: v.$color-purple;
+        color: v.$color-white;
+        border: none;
+        border-radius: v.$raio-pequeno;
+        padding: 12px 0;
+        font-size: v.$font-size-sp;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.18s ease;
+
+        &:hover {
+            background-color: #4a30b8;
+        }
+    }
+}

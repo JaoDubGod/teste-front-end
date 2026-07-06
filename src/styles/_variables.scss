@@ -1,0 +1,38 @@
+// Paleta de cores baseando-me no layout enviado
+$color-bg-dark: #14142b; //Fundo principal
+$color-bg-darker: #0e0e21; // Fundo mais escuro para footer e newsletter)
+$color-purple: #6c4bf4; // Roxo principal para botões e destaques
+$color-orange: #ff7a1a; // Para botão de compra e popup
+$color-orange-dark: #e8690a;
+$color-white: #ffffff; // Para textos
+$color-preco-velho: #9a9ab0; // Para preço antigo
+$color-preco-novo: #1c1c2e; // Para preço novo
+$color-purple-claro: #8b6ff7;
+$color-preco-dark: #1c1c2e;
+$color-text: #1c1c2e; // Cor padrão de texto no corpo do site
+    
+// Design de letras
+$font-family-base: 'Poppins', 'Segoe UI', Arial, sans-serif;
+
+$font-size-base: 15px; // Tamanho base para textos
+$font-size-pequeno: 11px; // Para textos menores
+$font-size-sp: 13px; // Para textos em semi-pequeno
+$font-size-meio: 16px; // Para textos em médio
+$font-size-grande: 18px; // Para textos em grande
+
+// Espaçamento
+$spacing-unidade: 8px; // Unidade base de espaçamento
+
+// Bordas
+$raio-pequeno: 4px; // Para cantos levemente arredondados
+$raio-medio: 8px; // Para cantos arredondados
+$raio-grande: 12px; // Para cantos bem arredondados
+
+// Layout
+$max-largura: 1200px; // Largura máxima para centralizar conteúdo
+$header-altura: 60px; // Altura do cabeçalho
+
+// Largura específica das telas
+$largura-mobile: 480px; // Para telas pequenas (celulares)
+$largura-tablet: 768px; // Para telas médias (tablets)
+$largura-desktop: 1024px; // Para telas grandes (desktops)

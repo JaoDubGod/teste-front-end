@@ -1,61 +1,32 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# React + TypeScript + Vite
 
-## Pré-requisitos
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-- [Node.js](https://nodejs.org) versão 18 ou superior
-- npm (instalado junto com o Node)
+Currently, two official plugins are available:
 
-## Instalação
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Clone o repositório ou extraia o projeto, depois instale as dependências:
+## React Compiler
 
-```
-bash
-npm install
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Rodando em modo desenvolvimento
+## Expanding the Oxlint configuration
 
-```
-bash
-npm run dev
-```
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-Com isso, o servidor local (Vite) irá iniciar com recarregamento automátio. E o terminal irá enviar o endereço, sendo geralmente:
-
-```
-Local: http://localhost:5173/
-```
-
-## Para verificação de código (lint e tipos)
-O projeto não possuio testes automatizado, porém, conta com verificação de tipos (TypeScript) e lint:
-
-```
-bash
-npx tsc -b
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
 ```
 
-## Para gerar build de produção
-
-```
-bash
-npm run build
-```
-
-## Como visualizar o build de produção de forma local
-
-```
-bash
-npm run preview
-```
-
-## Estrutura do projeto
-
-```
-src/
-├── components/     → componentes React (Header, Modal, CartaoProduto, etc.)
-├── data/           → products.json com os dados dos produtos
-├── types/          → interfaces TypeScript
-├── utils/          → funções auxiliares (formatação de preço)
-└── styles/         → variáveis e estilos globais em Sass
-```
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

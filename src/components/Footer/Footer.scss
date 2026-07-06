@@ -1,0 +1,67 @@
+@use '../../styles/variables' as v;
+
+.footer {
+    background-color: v.$color-bg-dark;
+    color: #c7c7d6;
+
+    &__topo {
+        padding: 48px 0 32px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    &__container {
+        max-width: v.$max-largura;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media (max-width: v.$largura-tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: v.$largura-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo {
+        color: v.$color-white;
+        font-size: v.$font-size-grande;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    &__descricao {
+        font-size: v.$font-size-sp;
+        line-height: 1.6;
+        max-width: 260px;
+    }
+
+    &__coluna-titulo {
+        color: v.$color-white;
+        font-size: v.$font-size-sp;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+    }
+
+    &__coluna-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: v.$font-size-sp;
+
+        a:hover {
+            color: v.$color-white;
+        }
+    }
+
+    &__base {
+        padding: 20px 0;
+        font-size: v.$font-size-pequeno;
+        text-align: center;
+        color: #8a8a9e;
+    }
+}

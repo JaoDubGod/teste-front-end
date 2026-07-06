@@ -1,0 +1,117 @@
+@use '../../styles/variables' as v;
+
+.modal-fundo {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(10, 8, 24, 0.72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-caixa {
+    position: relative;
+    background-color: v.$color-white;
+    border-radius: v.$raio-grande;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    &__fechar {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.06);
+        color: v.$color-preco-dark;
+        font-size: 20px;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    &__imagem {
+        background-color: #f7f7fb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        border-top-left-radius: v.$raio-grande;
+        border-top-right-radius: v.$raio-grande;
+
+        img {
+            width: 160px;
+        }
+    }
+
+    &__corpo {
+        padding: 28px;
+    }
+
+    &__nome {
+        font-size: v.$font-size-grande;
+        font-weight: 700;
+        color: v.$color-preco-dark;
+        margin-bottom: 8px;
+    }
+
+    &__descricao {
+        font-size: v.$font-size-sp;
+        color: #4d4d63;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    &__precos {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 24px;
+    }
+
+    &__preco-antigo {
+        font-size: v.$font-size-pequeno;
+        color: v.$color-preco-velho;
+        text-decoration: line-through;
+    }
+
+    &__preco-novo {
+        font-size: 28px;
+        font-weight: 700;
+        color: v.$color-preco-novo;
+    }
+
+    &__parcelamento {
+        font-size: v.$font-size-pequeno;
+        color: #8a8a9e;
+    }
+
+    &__comprar {
+        width: 100%;
+        background-color: v.$color-purple;
+        color: v.$color-white;
+        border: none;
+        border-radius: v.$raio-pequeno;
+        padding: 14px 0;
+        font-size: v.$font-size-sp;
+        font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #4a30b8;
+        }
+    }
+}
